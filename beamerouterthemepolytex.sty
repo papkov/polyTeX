@@ -1,0 +1,53 @@
+\mode<presentation>
+% PolyTeX Beamer Theme 
+% (Peter the Great St. Petersburg Polytechnic University)
+% Distributed under GNU GPL3
+%
+% Mikhail Papkov (https://github.com/papkov)
+%
+% Based on guidelines: https://tex.stackexchange.com/questions/146529/design-a-custom-beamer-theme-from-scratch
+%
+% June 2017
+
+%%% Header and footer
+
+\usepackage[skins]{tcolorbox}
+
+% Frame title
+\defbeamertemplate*{frametitle}{polytex}[1][]
+{
+\vskip1cm%
+  \begin{beamercolorbox}[wd=\paperwidth,ht=1.2cm]{frametitle} 
+  \begin{tikzpicture}
+  \useasboundingbox[fill=white](0,0) rectangle(\the\paperwidth,1.2);
+  \path[fill stretch image={img/logo_p.pdf}] (0.45,0) rectangle(1.65,1.2);
+  \fill[polygreen] (2.05,0) rectangle(\the\paperwidth,1.2);
+   \ifx\insertframesubtitle\@empty%
+      {\node[anchor=west, white,font=\large] at (3.2,0.61){\insertframetitle};}
+      \else%
+      {\node[anchor= west, white,font=\large] at (3.2,0.81){\insertframetitle};%
+       \node[anchor= west, white,font=\small] at (3.2,0.41){\insertframesubtitle};}%
+      \fi
+  \end{tikzpicture}
+  \end{beamercolorbox}
+}
+
+
+\defbeamertemplate*{footline}{polytex}[1][] % Footline
+{
+	\leavevmode%
+	\hbox{%
+		\begin{beamercolorbox}[wd=.333333\paperwidth,ht=2ex,dp=1ex,center]{white_on_green}%
+			\usebeamerfont{author in head/foot}\insertshortauthor
+		\end{beamercolorbox}%
+		\begin{beamercolorbox}[wd=.333333\paperwidth,ht=2ex,dp=1ex,center]{white_on_green}%
+			\usebeamerfont{title in head/foot}\insertshortinstitute
+		\end{beamercolorbox}%
+		\begin{beamercolorbox}[wd=.333333\paperwidth,ht=2ex,dp=1ex,right]{white_on_green}%
+			\usebeamerfont{date in head/foot}\insertshortdate{}\hspace*{2em}
+			\insertframenumber{} / \inserttotalframenumber\hspace*{2ex} 
+	\end{beamercolorbox}}%
+	\vskip0pt%
+}
+
+\mode<all>

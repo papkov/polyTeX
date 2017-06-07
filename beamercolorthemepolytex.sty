@@ -1,0 +1,54 @@
+% PolyTeX Beamer Theme 
+% (Peter the Great St. Petersburg Polytechnic University)
+% Distributed under GNU GPL3
+%
+% Mikhail Papkov (https://github.com/papkov)
+%
+% Based on guidelines: https://tex.stackexchange.com/questions/146529/design-a-custom-beamer-theme-from-scratch
+%
+% June 2017
+
+%%% Color scheme 
+
+\mode<presentation>	
+
+% Define colors
+\definecolor{polygreen}{cmyk}{.75,0,1,.05}        
+\definecolor{polygray}{cmyk}{0,0,0,.80}        
+\definecolor{polyred}{cmyk}{0,1,1,.40}        
+\definecolor{polyorange}{cmyk}{0,.65,.95,0}        
+\definecolor{polyblue}{cmyk}{.85,.70,0,0}     
+\setbeamercolor{white_on_green}{bg=polygreen,fg=white} 
+\setbeamercolor{green_on_white}{fg=polygreen,bg=white} 
+
+% Set color of different objects (see Beamer User Guide for more info)
+\usecolortheme[named=polygreen]{structure}
+\setbeamercolor{background canvas}{bg=white}
+\setbeamercolor{frametitle}{bg=polygreen}
+\setbeamercolor{frametitle}{fg=white}
+\setbeamercolor{headline}{bg=polygreen}
+\setbeamercolor{alerted text}{fg=polyred}
+\setbeamercolor{itemize item}{fg=polygreen}
+\setbeamercolor{itemize subitem}{fg=polygreen}
+\setbeamercolor{itemize subsubitem}{fg=polygreen}
+\setbeamercolor{block title example}{fg=polyblue}
+\AtBeginEnvironment{exampleblock}{
+	\setbeamercolor{itemize item}{fg=polyblue}
+	\setbeamercolor{itemize subitem}{fg=polyblue}
+	\setbeamercolor{itemize subsubitem}{fg=polyblue}
+}
+\setbeamercolor{palette primary}{bg=polygreen}
+\setbeamercolor{palette primary}{fg=white}
+\setbeamercolor{palette secondary}{bg=polygreen}
+\setbeamercolor{palette secondary}{fg=white}
+\setbeamercolor{palette tertiary}{bg=polygreen}
+\setbeamercolor{palette tertiary}{fg=white}
+
+
+% Text color
+\setbeamercolor*{title page header}{fg=black}
+\setbeamercolor*{author}{fg=black}
+\setbeamercolor*{date}{fg=black}
+
+\mode
+<all>

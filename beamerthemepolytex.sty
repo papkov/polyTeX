@@ -1,0 +1,49 @@
+% PolyTeX Beamer Theme 
+% (Peter the Great St. Petersburg Polytechnic University)
+% Distributed under GNU GPL3
+%
+% Mikhail Papkov (https://github.com/papkov)
+%
+% Based on guidelines: https://tex.stackexchange.com/questions/146529/design-a-custom-beamer-theme-from-scratch
+%
+% June 2017
+
+%%% Main style file
+
+\mode<presentation>
+
+% Load packages
+\usepackage{wrapfig}
+\usepackage{xcolor}
+\usepackage{etoolbox}
+\usepackage{hyperref} 
+\usepackage{graphicx}
+\usepackage[export]{adjustbox}
+\PassOptionsToPackage{demo}{graphicx}
+
+% Requirement
+\RequirePackage{tikz}
+
+% Settings
+\useinnertheme{polytex}
+\useoutertheme{polytex}
+\usecolortheme{polytex}
+
+% Set templates
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{blocks}[rounded][shadow=false]  
+\setbeamertemplate{itemize items}[circle]   % Style of bullet points
+
+
+% Use hyperref
+\usepackage{hyperref}
+\hypersetup{
+	unicode=true,          % non-Latin characters in Acrobat’s bookmarks
+	colorlinks=true,       % false: boxed links; true: colored links
+	linkcolor=white,       % color of internal links (change box color with linkbordercolor)
+	citecolor=polyblue,     % color of links to bibliography
+	filecolor=polyblue,     % color of file links
+	urlcolor=polyblue       % color of external links
+}
+
+\mode<all>
